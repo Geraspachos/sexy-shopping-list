@@ -1,0 +1,32 @@
+{
+  "name": "sexy-shopping-list",
+  "version": "1.0.0",
+  "description": "Sexy shopping list",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server & npm run watch",
+    "server": "live-server --watch=index.html,build",
+    "precompile": "rm -rf build/*",
+    "compile": "npm run compile:js && npm run compile:styles",
+    "compile:js": "cp -R app/js build",
+    "compile:styles": "node-sass app/styles/main.scss build/styles/main.css",
+    "watch": "npm run watch:js & npm run watch:styles",
+    "watch:js": "watch 'npm run compile:js' app/js",
+    "watch:styles": "watch 'npm run compile:styles' app/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlambas/sexy-shopping-list.git"
+  },
+  "author": "Trevor Lambas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlambas/sexy-shopping-list/issues"
+  },
+  "homepage": "https://github.com/tlambas/sexy-shopping-list#readme",
+  "dependencies": {
+    "live-server": "^0.9.1",
+    "node-sass": "^3.4.2",
+    "watch": "^0.17.1"
+  }
+}

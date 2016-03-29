@@ -32,3 +32,12 @@ footer {
   padding: 30px;
   color: white;
   text-align: center; }
+
+#recipe-button {
+  float: left; }
+
+#add-button {
+  float: right; }
+
+#add-input {
+  float: right; }

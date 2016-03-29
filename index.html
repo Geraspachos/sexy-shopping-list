@@ -8,6 +8,11 @@
 </head>
 <body>
     <header>The Sexy Shopping List</header>
+
+    <div id="root"></div>
+
+    <!--<h1>OLD APP</h1>
+    <img src="ball.jpeg" id="ball">
     <div class="lists">
             <!--<ul dnd-list="list" class="list">
                 <li ng-repeat="item in list"
@@ -19,10 +24,10 @@
                 >
                     {{item.label}
 
-                </li>-->
+                </li>
             <ul class="list">
                 <li class="list-header">Have</li>
-                <li class="item">Eggs</li>
+                <li class="item" id="id1">Eggs</li>
                 <li class="item">Ground Beef</li>
                 <li class="item">Steak</li>
             </ul>
@@ -35,10 +40,11 @@
         </div>
         <footer>
             <div class="btn-bar">
-                <button>Recipe</button>
-                <input>
-                <button>Add Item</button>
+                <button class="btn" id="recipe-button">Recipe</button>
+                <input id="add-input">
+                <button class="btn" id="add-button">Add Item</button>
             </div>
-        </footer>
+        </footer>-->
+    <script src="build/bundle.js"></script>
 </body>
 </html>

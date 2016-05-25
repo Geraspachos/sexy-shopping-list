@@ -10,7 +10,8 @@ const webpackConfig = {
         loaders: [
             { test: /\.js$/, loaders: ['babel'], include: /app/ }
         ]
-    }
+    },
+    devtool: 'source-map',
 }
 
 export default webpackConfig

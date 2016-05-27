@@ -3,28 +3,45 @@ body {
   font-family: sans-serif;
   background: lightgrey; }
 
-.lists {
+.lists .list {
+  display: block;
+  max-width: 400px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px;
   text-align: center; }
-  .lists .list {
-    display: inline-block;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px;
-    text-align: center;
+  .lists .list .list-header {
+    padding: 10px;
+    color: white;
+    background: darkmagenta; }
+  .lists .list .new-item-input {
+    text-align: inherit;
+    padding: 10px;
+    margin-bottom: 4px;
     width: 100%;
-    max-width: 400px; }
-    .lists .list .list-header {
-      padding: 10px;
-      margin-bottom: 4px;
-      color: white;
-      background: darkmagenta;
-      border-radius: 4px; }
-    .lists .list .item {
-      padding: 10px;
-      background: whitesmoke;
-      border-radius: 4px;
-      margin-bottom: 4px;
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+    font-size: 1em;
+    border: 1px solid darkmagenta; }
+  .lists .list .remove-item-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    font-size: 2em;
+    padding: 0 0.5em 0 0;
+    line-height: 1;
+    opacity: 0.35;
+    cursor: pointer; }
+    .lists .list .remove-item-button:hover {
+      opacity: 1; }
+  .lists .list .item {
+    position: relative;
+    font-size: 1em;
+    padding: 10px;
+    background: whitesmoke;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
 
 header,
 footer {

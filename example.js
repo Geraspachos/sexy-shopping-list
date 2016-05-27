@@ -32,6 +32,7 @@ const render = () => {
         //input item
         const inputEl = document.createElement('input')
         inputEl.setAttribute('placeholder', 'Add Item')
+        inputEl.setAttribute('class', 'new-item-input')
         listEl.appendChild(inputEl)
         listEl.addEventListener('keydown', (e) => {
             switch (e.keyCode) {
@@ -53,11 +54,12 @@ const render = () => {
         state.items.forEach((item) => {
             if (item.categoryId === category.id) {
                 // <li class="item">Beef</li>
-                const removeEl = document.createElement('button')
+                const removeEl = document.createElement('div')
+                removeEl.setAttribute('class', 'remove-item-button')
                 removeEl.addEventListener('click', () => {
                     removeItem(item.id)
                 })
-                removeEl.textContent = 'X'
+                removeEl.innerHTML = '&times;'
 
                 const itemEl = document.createElement('li')
                 itemEl.setAttribute('class', 'item')
